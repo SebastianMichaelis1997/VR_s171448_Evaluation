@@ -128,34 +128,49 @@
 </head>
 
 <body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col" id="left">
+            <script>
+                var cl =createCloudAdapter();
+                cl.retrieveAngelKeys();
+            </script>
+
+        </div>
+        <div class="col" id="right">
+            Container Right
+        </div>
+    </div>
+</div>
 <!--<script>-->
 <!--    alert("Das ist eine 5,0");-->
 <!--</script>-->
-<div class="container">
+<!--<div class="container">-->
 
-    <div class="row mt-4 mb-4">
-        <div class="col-12" id="dashboard-row-1">
+<!--    <div class="row mt-4 mb-4">-->
+<!--        <div class="col-12" id="dashboard-row-1">-->
 
-        </div>
-        <div style="height:100px;"></div>
-    </div><!--zero row-->
+<!--        </div>-->
+<!--        <div style="height:100px;"></div>-->
+<!--    </div>&lt;!&ndash;zero row&ndash;&gt;-->
 
-    <div class="row mt-4 mb-4" id="dashboard-row-2">
-        <div class="col-md-6 col-sm-12 mb-4" id="dashboard-row-2-column-1">
-        </div>
-        <div class="col-md-6 col-sm-12 mb-4" id="dashboard-row-2-column-2">
-        </div><!-- col2-->
-    </div><!--first row-->
+<!--    <div class="row mt-4 mb-4" id="dashboard-row-2">-->
+<!--        <div class="col-md-6 col-sm-12 mb-4" id="dashboard-row-2-column-1">-->
+<!--        </div>-->
+<!--        <div class="col-md-6 col-sm-12 mb-4" id="dashboard-row-2-column-2">-->
+<!--        </div>&lt;!&ndash; col2&ndash;&gt;-->
+<!--    </div>&lt;!&ndash;first row&ndash;&gt;-->
 
-    <div id="dashboard-row-3">
-        <!-- rows & cols are filled by customerdialog.js-->
-    </div><!--second row-->
+<!--    <div id="dashboard-row-3">-->
+<!--        &lt;!&ndash; rows & cols are filled by customerdialog.js&ndash;&gt;-->
+<!--    </div>&lt;!&ndash;second row&ndash;&gt;-->
 
-    <div class="row ">
-        <div class="col-12" id="log" style="display:none;">
-        </div>
-    </div><!--third row-->
-</div><!-- bootstrap container-->
+<!--    <div class="row ">-->
+<!--        <div class="col-12" id="log" style="display:none;">-->
+<!--        </div>-->
+<!--    </div>&lt;!&ndash;third row&ndash;&gt;-->
+<!--</div>&lt;!&ndash; bootstrap container&ndash;&gt;-->
 
 <script src="https://elaspix.de/Lehre/VR/simulator/lib/bootstrap.bundle-4.4.1.min.js"></script>
 <!-- includes popper, doesnt run from local directory-->

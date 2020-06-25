@@ -70,16 +70,6 @@ function createCloudAdapter(settings) {
             }
 
         });
-
-        //var nathan={"name":"Nathan Brown","spent":"1.200$","state":"happy","iconurl":"pics/pixabay/woman1.jpg","x":200,"y":400,"room":"2055","creditcard":"Mastercard","dateofupload":"09.06.20"};
-        //var caren={"name":"Nora Antony","spent":"1.200$","state":"happy","iconurl":"pics/pixabay/woman2.jpg","x":100,"y":300,"room":"2055","creditcard":"Mastercard","dateofupload":"09.06.20"};
-        //var nico={"name":"Aleesha","spent":"1.200$","state":"happy","iconurl":"pics/pixabay/woman3.jpg","x":500,"y":40,"room":"2055","creditcard":"Mastercard","dateofupload":"09.06.20"};
-        //var max={"name":"Luke","spent":"1.200$","state":"happy","iconurl":"pics/pixabay/man1.jpg","x":500,"y":100,"room":"2055","creditcard":"Mastercard","dateofupload":"09.06.20"};
-        //var paul={"name":"Ingrid Kannerman","spent":"1.200$","state":"happy","iconurl":"pics/pixabay/man2.jpg","x":600,"y":700,"room":"2055","creditcard":"Mastercard","dateofupload":"09.06.20"};
-        //var titus={"name":"A.I. Guy","spent":"1.200$","state":"happy","iconurl":"pics/pixabay/man3.jpg","x":100,"y":40,"room":"2055","creditcard":"Mastercard","dateofupload":"09.06.20"};
-        //aFunctionToBeCalledAfterResponse([nathan,caren,max,nico,paul,titus]);
-
-
     }
 
     function authenticateAngel(aAngelName, aPwClear, aFuncAuthResult) {
@@ -152,13 +142,30 @@ function createCloudAdapter(settings) {
         });
     }
 
+    function retrieveAngelKeys() {
+        var url = mCloudBase + "/listkeys?owner=upload_angel";
+        $.getJSON(url, function (response) {
+            if (response.hasOwnProperty("status") && response.hasOwnProperty == "failed") {
+                log("could not retrieve data for angel " + aAngel);
+            } else {
+                var angels = response;
+                $.each(angels, function (key) {
+                    var current_angel_key =angels[key].key;
+
+                    $("#left").append('<p>'+current_angel_key+'</p>')
+                })
+            }
+        });
+
+    }
 
     return {
         "loadCustomersForAngel": loadCustomersForAngel,
         "retrieveCustomerData": retrieveCustomerData,
         "inflateCustomerList": inflateCustomerList,
         "authenticateAngel": authenticateAngel,
-        "buyUpgrade": buyUpgrade
+        "buyUpgrade": buyUpgrade,
+        "retrieveAngelKeys": retrieveAngelKeys
 
     };
 }
