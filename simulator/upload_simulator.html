@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" href="lib/bootstrap4.4.1.min.css" >
+		 <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
+		
+		
+		<script src="lib/jquery-3.4.1.min.js"></script>
+		<script src="elaspix_VRMap.js"></script>
+		<script src="elaspix_pin.js"></script>
+		<script src="elaspix_simulator.js"></script>		
+		<script src="elaspix_inputtext.js"></script>
+		<script src="elaspix_dropdown_desktop.js"></script>
+		<script src="elaspix_switch.js"></script>
+		<script src="elaspix_cloudadapter.js"></script>
+		<script src="lib/murmurhash3_32_gc.js"></script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<script>
+			
+			
+			
+			var simulator;
+			var logger;
+			
+			$(function()
+			  {
+				logger=$("#log");
+				
+				var col1=$("#simulator-column-1");
+				var col2=$("#simulator-column-2");				
+				console.log(col2);
+				
+				
+				
+				simulator=createSimulator({"col1":col1,"col2":col2,"log":log});
+				
+				
+				
+				});
+			
+			function log(aText)
+			{
+				console.log(aText);				
+				logger.prepend($("<div/>").addClass("log-entry").text(aText));
+			}
+			
+			
+		</script>
+	</head>
+	
+	<body>
+		
+	
+	<div class="container">
+		
+		<div class="row mt-4 ">
+			<div class="col-12" >
+				<h1>Upload Simulator</h1>
+			</div>
+		</div><!--zero row-->
+		
+		<div class="row mt-4 mb-4 ">
+			<div class="col-lg-4 col-sm-12 mb-4" id="simulator-column-1">
+			</div>
+			<div class="col-lg-8 col-sm-12 mb-4" id="simulator-column-2">
+			</div><!-- col2-->
+		</div><!--first row-->
+		
+		<div class="row ">
+			<button id="button-init-angel">initialize angel</button>
+			<button id="button-init-customers">initialize a single customer</button>
+			<div class="col-12" id="log">
+			</div>
+		</div><!--second row-->
+	</div><!-- bootstrap container-->
+	
+	<script src="https://elaspix.de/Lehre/VR/simulator/lib/bootstrap.bundle-4.4.1.min.js"></script><!-- includes popper, doesnt run from local directory-->
+	
+	</body>
+	
+</html>

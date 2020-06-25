@@ -1,0 +1,174 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="lib/bootstrap4.4.1.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Work+Sans:wght@200&display=swap"
+          rel="stylesheet">
+
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <script src="elaspix_VRMap.js"></script>
+    <script src="elaspix_pin.js"></script>
+
+
+    <!--<script src="elaspix_dropdown_desktop.js"></script>-->
+
+    <script src="elaspix_cloudadapter.js"></script>
+
+    <script src="elaspix_login.js"></script>
+    <script src="elaspix_inputtext.js"></script>
+    <script src="elaspix_startscreen.js"></script>
+    <script src="elaspix_dashboard.js"></script>
+    <script src="elaspix_menubar.js"></script>
+    <script src="elaspix_card.js"></script>
+    <script src="elaspix_cardholder.js"></script>
+    <script src="elaspix_customerdialog.js"></script>
+    <script src="elaspix_dropdown_button2_desktop.js"></script>
+    <script src="elaspix_slider.js"></script>
+    <script src="lib/murmurhash3_32_gc.js"></script>
+
+
+    <style>
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+
+        h1.design-farat {
+            color: #0F2C48;
+            font-size: 60px;
+        }
+
+        label.design-farat {
+            color: #0F2C48;
+            font-size: 24px;
+        }
+
+        small.design-farat {
+            color: #0F2C48;
+            opacity: 0.44;
+            font-size: 18px;
+        }
+
+        .slider-ticks > small.design-farat {
+            color: #20B1B4;
+            font-size: 14px;
+            opacity: 1;
+        }
+
+        input.design-farat {
+            font-size: 24px;
+            height: 66px;
+            border-radius: 10px;
+            border: 1px solid #69A3DA;
+        }
+
+        select.design-farat {
+            font-size: 22px;
+            height: 56px;
+            border-radius: 10px;
+            border: 1px solid #69A3DA;
+            font-weight: 600;
+            opacity: 0.44;
+        }
+
+        input[type=range]::-moz-range-thumb,
+        input[type=range]::-webkit-slider-thumb {
+            background: #20B1B4;
+            height: 20px;
+            width: 20px;
+        }
+
+
+        button.design-farat {
+            background-color: #20B1B4;
+            height: 56px;
+            font-size: 24px;
+            font-weight: 600;
+            border-radius: 10px;
+            border: none;
+        }
+
+        button.design-farat:hover {
+            background-color: #38819A;
+
+        }
+
+        .card-name {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 600;
+        }
+
+        .card-properties {
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 200;
+        }
+
+    </style>
+
+
+    <script>
+
+
+        var dashboard;
+        var logger;
+
+        $(function () {
+            logger = $("#log");
+            var row1 = $("#dashboard-row-1");
+            var col1 = $("#dashboard-row-2-column-1");
+            var col2 = $("#dashboard-row-2-column-2");
+            var row3 = $("#dashboard-row-3");
+
+
+            dashboard = createDashboard({"row1": row1, "col1": col1, "col2": col2, "row3": row3});
+
+
+        });
+
+        function log(aText) {
+            console.log(aText);
+            logger.prepend($("<div/>").addClass("log-entry").text(aText));
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+
+<div class="container">
+
+    <div class="row mt-4 mb-4">
+        <div class="col-12" id="dashboard-row-1">
+
+        </div>
+        <div style="height:100px;"></div>
+    </div><!--zero row-->
+
+    <div class="row mt-4 mb-4" id="dashboard-row-2">
+        <div class="col-md-6 col-sm-12 mb-4" id="dashboard-row-2-column-1">
+        </div>
+        <div class="col-md-6 col-sm-12 mb-4" id="dashboard-row-2-column-2">
+        </div><!-- col2-->
+    </div><!--first row-->
+
+    <div id="dashboard-row-3">
+        <!-- rows & cols are filled by customerdialog.js-->
+    </div><!--second row-->
+
+    <div class="row ">
+        <div class="col-12" id="log" style="display:none;">
+        </div>
+    </div><!--third row-->
+</div><!-- bootstrap container-->
+
+<script src="https://elaspix.de/Lehre/VR/simulator/lib/bootstrap.bundle-4.4.1.min.js"></script>
+<!-- includes popper, doesnt run from local directory-->
+
+</body>
+
+</html>

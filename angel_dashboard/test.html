@@ -1,0 +1,91 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="lib/bootstrap4.4.1.min.css">
+
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <script src="elaspix_login.js"></script>
+    <script src="elaspix_inputtext.js"></script>
+    <script src="elaspix_startscreen.js"></script>
+    <script src="elaspix_dashboard.js"></script>
+    <script src="elaspix_menubar.js"></script>
+    <script src="elaspix_card.js"></script>
+    <script src="elaspix_cardholder.js"></script>
+    <script src="elaspix_customerdialog.js"></script>
+    <script src="elaspix_dropdown_button2_desktop.js"></script>
+    <script src="elaspix_slider.js"></script>
+
+
+    <style>
+        #stage {
+
+            width: 80%;
+            margin: auto;
+
+            position: relative;
+        }
+
+
+    </style>
+
+    <script>
+        var cardHolder;
+
+
+        $(function () {
+            stageDiv = $("#stage");
+            var customer1 = {
+                "name": "Nathon Brown", "iconurl": "pics/speckboy_avatare/02-man.svg", "room": "2055",
+                "creditcard": "American Express", "dateofupload": "09.06.20",
+                "spent": 1200, "state": "happy"
+            };
+            var customer2 = {
+                "name": "Nathon Brown", "iconurl": "pics/speckboy_avatare/02-man.svg", "room": "2055",
+                "creditcard": "American Express", "dateofupload": "09.06.20",
+                "spent": 1300, "state": "happy"
+            };
+            var customer3 = {
+                "name": "Nathon Brown", "iconurl": "pics/speckboy_avatare/02-man.svg", "room": "2055",
+                "creditcard": "American Express", "dateofupload": "09.06.20",
+                "spent": 90, "state": "happy"
+            };
+            var customer4 = {
+                "name": "Nathon Brown", "iconurl": "pics/speckboy_avatare/02-man.svg", "room": "2055",
+                "creditcard": "American Express", "dateofupload": "09.06.20",
+                "spent": 2000, "state": "happy"
+            };
+
+            cardHolder = createCardholder({"parent": stageDiv});
+            cardHolder.addCard(customer1);
+            cardHolder.addCard(customer2);
+            cardHolder.addCard(customer3);
+            cardHolder.addCard(customer4);
+            //customerDialog=createCustomerdialog({"parent":$("#row3"),"customer":customer});
+
+        });
+
+    </script>
+</head>
+
+<body>
+
+<div id="stage">
+
+</div>
+<div class="container">
+
+
+    <div id="row3">
+    </div>
+
+</div>
+
+
+<!--<script src="/lib/bootstrap.bundle-4.4.1.min.js"</script>includes popper-->
+<script src="https://elaspix.de/Lehre/VR/simulator/lib/bootstrap.bundle-4.4.1.min.js"></script>
+<!-- includes popper, doesnt run from local directory-->
+</body>
+
+
+</html>

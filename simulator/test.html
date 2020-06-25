@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<meta charset="utf-8">		
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
+		<script src="lib/jquery-3.4.1.min.js"></script>
+		
+		
+		<script src="elaspix_VRMap.js"></script>
+		<script src="elaspix_pin.js"></script>
+		
+		
+		
+		<style>
+			#stage{
+				background-color:#888888;
+				width:80%;
+				margin:auto;
+				
+				position:relative;
+			}
+			
+			
+		</style>
+		
+		<script>			
+			var map;
+			
+			
+			$(function(){
+				stageDiv=$("#stage");
+				
+				map=createVRMap({"parent":stageDiv,"isDraggable":false});
+				
+				});
+			
+		</script>
+	</head>
+	
+	<body>
+		
+		<div id="stage">
+			
+		</div>
+		
+		<button onclick="map.addPin('Nathan',300,300);">addPin Nathan </button><br/>
+		<button onclick="map.centerMap('Nathan');">center to Nathan</button><br/>
+		<button onclick="map.addPin('Anja',600,20);">addPin Anja</button><br/>
+		<button onclick="map.centerMap('Anja');">center to Anja</button><br/>
+		
+		<script src="/lib/bootstrap.bundle-4.0.min.js"</script><!-- includes popper-->
+	</body>
+	
+	
+</html>
