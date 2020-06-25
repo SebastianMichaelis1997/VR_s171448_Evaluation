@@ -7,7 +7,8 @@
  *add functionality here to send the status upates to the cloud
  */
 function createCloudAdapter(settings) {
-    var mToken_upload_customer = "UaeObe4TeZxM7J5sAZESM_7xGvc_";
+    var mToken_upload_customer = "9nsjEvuXDwiwTJOwievRMxfHbfw_";
+    // var mToken_upload_customer = "UaeObe4TeZxM7J5sAZESM_7xGvc_";
     var mCloudBase = "https://webtechlecture.appspot.com/cloudstore";
 
 
