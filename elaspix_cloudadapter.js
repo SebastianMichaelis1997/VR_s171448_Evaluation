@@ -45,8 +45,6 @@ function createCloudAdapter(settings) {
 
 
     function retrieveCustomerDataBulk(aCustomerNames, aFunctionToBeCalledAfterResponse) {
-
-
         var nameMap = {};//create a hashMap to check the list of all customers
         $.each(aCustomerNames, function (index, name) {
             nameMap[name] = true;
@@ -101,18 +99,14 @@ function createCloudAdapter(settings) {
                 }
             }
         });
-
-
     }
 
     function inflateCustomerList() {
         //var customers=getCustomerList();
-
     }
 
     //added by TG (elaspix) to generate an application specific seed from a prefix
     function getMurmurSeed(aPrefix) {
-
         var sum = 0;
         for (var i = 0; i < aPrefix.length; i++) {
             sum += aPrefix.charCodeAt(i);
